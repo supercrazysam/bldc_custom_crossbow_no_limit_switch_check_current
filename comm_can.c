@@ -32,6 +32,9 @@
 #include "crc.h"
 #include "packet.h"
 
+#include "app.h" // Pin mapping on this hardware   //G
+
+
 // Settings
 #define CANDx			CAND1
 #define RX_FRAMES_SIZE	100
@@ -275,6 +278,13 @@ static THD_FUNCTION(cancom_process_thread, arg) {
 						timeout_reset();
 						break;
 
+                                        case 14:
+						ind = 0;
+                                                //app_custom_stop();
+                                                app_custom_start();
+                                                break;
+                          
+				
 					default:
 						break;
 					}
