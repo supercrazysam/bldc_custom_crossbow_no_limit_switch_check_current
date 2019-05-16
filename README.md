@@ -1,2 +1,11 @@
-This is the source code for the VESC DC/BLDC/FOC controller. Read more at  
-http://vesc-project.com/
+custom application for crossbow clocking.... 
+
+write to prevent thread from being recalled when the function is working....    
+
+adding can support to call crossbow application
+
+
+
+create a new command in comm_can.c  (14) which starts the custom application
+
+custom application is designed to prevent re-run when already working
