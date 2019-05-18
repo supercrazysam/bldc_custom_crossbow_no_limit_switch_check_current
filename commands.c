@@ -44,6 +44,9 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+
+
+
 // Threads
 static THD_FUNCTION(detect_thread, arg);
 static THD_WORKING_AREA(detect_thread_wa, 2048);

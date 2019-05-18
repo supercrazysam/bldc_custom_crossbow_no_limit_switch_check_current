@@ -82,14 +82,11 @@ static THD_FUNCTION(example_thread, arg)
                 chThdSleepMilliseconds(500);
                 timeout_reset();
                     
-                while (fabs(mc_interface_get_rpm() ) > 100) {} //500
-
-                mc_interface_set_pid_speed(17000.0);
-                chThdSleepMilliseconds(500);
+                while (fabs(mc_interface_get_rpm() ) > 500) {}
                 
 
                 mc_interface_set_pid_speed(0.0);
-                chThdSleepMilliseconds(100);  //1000
+                chThdSleepMilliseconds(1000);
                 timeout_reset();
 
 
@@ -97,11 +94,11 @@ static THD_FUNCTION(example_thread, arg)
                 chThdSleepMilliseconds(500);
                 timeout_reset();
                     
-                while (fabs(mc_interface_get_rpm() ) > 100) {} //500
+                while (fabs(mc_interface_get_rpm() ) > 500) {}
 
                 
                 mc_interface_set_pid_speed(0.0);
-                chThdSleepMilliseconds(100);   //500
+                chThdSleepMilliseconds(500);
                 timeout_reset();
 
                 is_running = false;
